@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc44cf9c-c017-4655-8193-d2c07f75ff29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/principal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/principal.js" afterDir="false" />
     </list>
@@ -51,7 +53,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595944237694</updated>
-      <workItem from="1595944241461" duration="5207000" />
+      <workItem from="1595944241461" duration="5290000" />
+      <workItem from="1596021315531" duration="5443000" />
     </task>
     <servers />
   </component>
@@ -68,5 +71,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
