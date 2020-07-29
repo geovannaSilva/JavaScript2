@@ -1,42 +1,59 @@
 
 var botao = document.querySelector("#adicionar-paciente"); /*pegando o botao do html */
 
-botao.addEventListener("click", adicionar); /* Criando o evento de click */
-
-/* Inicio da Função do evento de click */
+/* Criando o evento de click do botão adicionar */
+botao.addEventListener("click", adicionar);
 
 function adicionar(event) {
     event.preventDefault();
 
-    var paciente = document.querySelector(".paciente-adicionado");/* Pegando o form com os inputs */
+    var form = document.querySelector(".paciente-adicionado");
 
-    var nome = paciente.nome.value; /* Passando o valor dos inputs para uma variável */
-    var peso = paciente.peso.value; /* Passando o valor dos inputs para uma variável */
-    var altura = paciente.altura.value; /* Passando o valor dos inputs para uma variável */
-    var gordura = paciente.gordura.value; /* Passando o valor dos inputs para uma variável */
+    var paciente = obterDadosdoPaciente(form);
 
-    var pacienteTr = document.createElement("tr"); /* Criando uma TR atraves do JS */
+    console.log(paciente);
 
-    var nomeTd = document.createElement("td"); /* Criando um TD atraves do JS */
-    var pesoTd = document.createElement("td"); /* Criando um TD atraves do JS */
-    var alturaTd = document.createElement("td"); /* Criando um TD atraves do JS */
-    var gorduraTd = document.createElement("td"); /* Criando um TD atraves do JS */
-    var imcTd = document.createElement("td"); /* Criando um TD atraves do JS */
 
-    nomeTd.textContent = nome; /* Passando apenas os valores das TD */
-    pesoTd.textContent = peso;
-    alturaTd.textContent = altura;
-    gorduraTd.textContent = gordura;
-    imcTd.textContent = calculaImc(peso, altura);
-
-    pacienteTr.appendChild(nomeTd);/* passando as td como filhas da tr */
-    pacienteTr.appendChild(pesoTd);
-    pacienteTr.appendChild(alturaTd);
-    pacienteTr.appendChild(gorduraTd);
-    pacienteTr.appendChild(imcTd);
-
-    var tabela = document.querySelector("#tabela-pacientes"); /* Pegando o corpo da tabela */
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
 
     tabela.appendChild(pacienteTr);
 
+    form.reset();
+
+};
+
+function obterDadosdoPaciente(form){
+
+    var paciente = {
+        nome: form.nome.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        gordura: form.gordura.value,
+        imc: calculaImc(form.peso.value, form.altura.value),
+    }
+    return paciente;
 }
+
+function montaTr(paciente){
+    var pacienteTr = document.createElement("tr");
+    pacienteTr.classList.add("paciente");
+
+    pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
+    pacienteTr.appendChild(montaTd(paciente.peso, "info-peso"));
+    pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
+    pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
+    pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
+
+    return pacienteTr
+}
+/* Cria a tag TD e cria uma classe para cada tag */
+function montaTd(dado, classe){
+    var td = document.createElement("td");
+    td.textContent = dado;
+    td.classList.add(classe);
+
+    return td;
+}
+
+
