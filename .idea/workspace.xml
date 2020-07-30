@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc44cf9c-c017-4655-8193-d2c07f75ff29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/filtrar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/remover-paciente.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/remover-paciente.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/calcula-imc.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/calcula-imc.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
       <updated>1595944237694</updated>
       <workItem from="1595944241461" duration="5290000" />
       <workItem from="1596021315531" duration="9454000" />
-      <workItem from="1596106490552" duration="5265000" />
+      <workItem from="1596106490552" duration="9309000" />
     </task>
     <servers />
   </component>
